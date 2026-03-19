@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matus\\Desktop\\lock in simulator2\\ce_hastag\\Sidequest\\Sidequest\\Sidequest.csproj",
+      "projectUniqueName": "C:\\Users\\matus\\projects\\sidequest\\Sidequest\\Sidequest\\Sidequest.csproj",
       "projectName": "Sidequest",
-      "projectPath": "C:\\Users\\matus\\Desktop\\lock in simulator2\\ce_hastag\\Sidequest\\Sidequest\\Sidequest.csproj",
+      "projectPath": "C:\\Users\\matus\\projects\\sidequest\\Sidequest\\Sidequest\\Sidequest.csproj",
       "packagesPath": "C:\\Users\\matus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matus\\Desktop\\lock in simulator2\\ce_hastag\\Sidequest\\Sidequest\\obj\\",
+      "outputPath": "C:\\Users\\matus\\projects\\sidequest\\Sidequest\\Sidequest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,7 +52,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0-windows7.0": {
@@ -76,7 +76,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
