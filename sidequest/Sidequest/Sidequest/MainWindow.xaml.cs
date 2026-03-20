@@ -20,7 +20,7 @@ namespace Sidequest
     public partial class MainWindow : Window
     {
         public bool isAnimating = false;
-        public bool isExpanded = false;
+        public bool canResize = false;
 
         private double _anchorRight;
         private double _anchorBottom;
@@ -70,13 +70,23 @@ namespace Sidequest
             this.BeginAnimation(prop, sizeAnim, HandoffBehavior.Compose);
         }
 
-        private void animateWindow(double targetSize)
+        private async Task animateWindow(double targetSize)
         {
+            if (canResize && targetSize == 40)
+            {
+                await Task.Delay(5000);
+                canResize = false;
+            }
+
+            canResize = true;
+
             animateProperty(Window.WidthProperty, targetSize);
             animateProperty(Window.HeightProperty, targetSize);
 
             animateProperty(Window.LeftProperty, _anchorRight - targetSize);
             animateProperty(Window.TopProperty, _anchorBottom - targetSize);
+
+            Thread.Sleep(250);
         }
     }
 }
