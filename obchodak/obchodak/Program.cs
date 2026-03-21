@@ -441,48 +441,50 @@ namespace simulace
 
             int druh = P % 3;
 
-            if (druh == 1)
+            switch (P)
             {
-
-            }
-            else if (druh == 2)
-            {
-                for (int i = 0; i < Nakupy.Count; i++)
-                {
-                    Oddeleni odd = OddeleniPodleJmena(Nakupy[i]);
-                    if (odd != null && odd.patro == this.patro)
+                case 2:
+            
+                
+                    for (int i = 0; i < Nakupy.Count; i++)
                     {
-                        string vybranyNakup = Nakupy[i];
-                        Nakupy.RemoveAt(i);
-                        Nakupy.Insert(0, vybranyNakup);
-                        break;
-                    }
-                }
-            }
-            else if (druh == 0)
-            {
-                int indexNejlepsiho = 0;
-                int nejmensiFronta = int.MaxValue;
-
-                for (int i = 0; i < Nakupy.Count; i++)
-                {
-                    Oddeleni odd = OddeleniPodleJmena(Nakupy[i]);
-                    if (odd != null)
-                    {
-                        int delkaFronty = odd.ZjistiDelkuFronty();
-                        if (delkaFronty < nejmensiFronta)
+                        Oddeleni odd = OddeleniPodleJmena(Nakupy[i]);
+                        if (odd != null && odd.patro == this.patro)
                         {
-                            nejmensiFronta = delkaFronty;
-                            indexNejlepsiho = i;
+                            string vybranyNakup = Nakupy[i];
+                            Nakupy.RemoveAt(i);
+                            Nakupy.Insert(0, vybranyNakup);
+                            break;
                         }
                     }
-                }
-                if (indexNejlepsiho != 0)
-                {
-                    string vybranyNakup = Nakupy[indexNejlepsiho];
-                    Nakupy.RemoveAt(indexNejlepsiho);
-                    Nakupy.Insert(0, vybranyNakup);
-                }
+                    break;
+
+                case 0:
+                
+                    int indexNejlepsiho = 0;
+                    int nejmensiFronta = int.MaxValue;
+
+                    for (int i = 0; i < Nakupy.Count; i++)
+                    {
+                        Oddeleni odd = OddeleniPodleJmena(Nakupy[i]);
+                        if (odd != null)
+                        {
+                            int delkaFronty = odd.ZjistiDelkuFronty();
+                            if (delkaFronty < nejmensiFronta)
+                            {
+                                nejmensiFronta = delkaFronty;
+                                indexNejlepsiho = i;
+                            }
+                        }
+                    }
+                    if (indexNejlepsiho != 0)
+                    {
+                        string vybranyNakup = Nakupy[indexNejlepsiho];
+                        Nakupy.RemoveAt(indexNejlepsiho);
+                        Nakupy.Insert(0, vybranyNakup);
+                    }
+                    break;
+                
             }
         }
         private Oddeleni OddeleniPodleJmena(string kamChci)
