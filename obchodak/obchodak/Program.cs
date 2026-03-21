@@ -122,6 +122,11 @@ namespace simulace
         {
             fronta.Remove(koho);
         }
+
+        public int ZjistiDelkuFronty()
+        {
+            return fronta.Count; //pomocná pro S2
+        }
         public override void Zpracuj(Udalost ud)
         {
             switch (ud.co)
@@ -344,11 +349,19 @@ namespace simulace
     }
     public class Zakaznik : Proces
     {
+        public static int globalniPocitadlo = 1;
+        public int P;
+        // P je pořadové číslo zákazníka
+
         private int trpelivost;
         private int prichod;
         private List<string> Nakupy;
         public Zakaznik(Model model, string popis)
         {
+            this.P = globalniPocitadlo;
+            globalniPocitadlo++;
+            // přiřadíme číslo zákazníkovi a inktementujeme pro dalšího
+
             this.model = model;
             string[] popisy = popis.Split(Proces.mezery, StringSplitOptions.RemoveEmptyEntries);
             this.ID = popisy[0];
@@ -368,6 +381,8 @@ namespace simulace
             switch (ud.co)
             {
                 case TypUdalosti.Start:
+                    PouzijSuperschopnosti();
+
                     if (Nakupy.Count == 0)
                     // ma nakoupeno
                     {
@@ -420,6 +435,56 @@ namespace simulace
             }
         }
 
+        private void PouzijSuperschopnosti()
+        {
+            if (Nakupy.Count <= 1) return;
+
+            int druh = P % 3;
+
+            if (druh == 1)
+            {
+
+            }
+            else if (druh == 2)
+            {
+                for (int i = 0; i < Nakupy.Count; i++)
+                {
+                    Oddeleni odd = OddeleniPodleJmena(Nakupy[i]);
+                    if (odd != null && odd.patro == this.patro)
+                    {
+                        string vybranyNakup = Nakupy[i];
+                        Nakupy.RemoveAt(i);
+                        Nakupy.Insert(0, vybranyNakup);
+                        break;
+                    }
+                }
+            }
+            else if (druh == 0)
+            {
+                int indexNejlepsiho = 0;
+                int nejmensiFronta = int.MaxValue;
+
+                for (int i = 0; i < Nakupy.Count; i++)
+                {
+                    Oddeleni odd = OddeleniPodleJmena(Nakupy[i]);
+                    if (odd != null)
+                    {
+                        int delkaFronty = odd.ZjistiDelkuFronty();
+                        if (delkaFronty < nejmensiFronta)
+                        {
+                            nejmensiFronta = delkaFronty;
+                            indexNejlepsiho = i;
+                        }
+                    }
+                }
+                if (indexNejlepsiho != 0)
+                {
+                    string vybranyNakup = Nakupy[indexNejlepsiho];
+                    Nakupy.RemoveAt(indexNejlepsiho);
+                    Nakupy.Insert(0, vybranyNakup);
+                }
+            }
+        }
         private Oddeleni OddeleniPodleJmena(string kamChci)
         {
             foreach (Oddeleni odd in model.VsechnaOddeleni)
