@@ -1,0 +1,7 @@
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\bin\Debug\obchodak.exe.config
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\bin\Debug\obchodak.exe
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\bin\Debug\obchodak.pdb
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\obj\Debug\obchodak.csproj.AssemblyReference.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\obj\Debug\obchodak.csproj.CoreCompileInputs.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\obj\Debug\obchodak.exe
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\obj\Debug\obchodak.pdb
