@@ -5,3 +5,11 @@ C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\obj\Debug\
 C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\obj\Debug\obchodak.csproj.CoreCompileInputs.cache
 C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\obj\Debug\obchodak.exe
 C:\Users\matus\Desktop\lock in simulator2\ce_hastag\obchodak\obchodak\obj\Debug\obchodak.pdb
+C:\Users\kikip\projects\obchodak\obchodak\bin\Debug\obchodak.exe.config
+C:\Users\kikip\projects\obchodak\obchodak\bin\Debug\obchodak.exe
+C:\Users\kikip\projects\obchodak\obchodak\bin\Debug\obchodak.pdb
+C:\Users\kikip\projects\obchodak\obchodak\obj\Debug\obchodak.csproj.AssemblyReference.cache
+C:\Users\kikip\projects\obchodak\obchodak\obj\Debug\obchodak.exe.config
+C:\Users\kikip\projects\obchodak\obchodak\obj\Debug\obchodak.csproj.CoreCompileInputs.cache
+C:\Users\kikip\projects\obchodak\obchodak\obj\Debug\obchodak.exe
+C:\Users\kikip\projects\obchodak\obchodak\obj\Debug\obchodak.pdb
