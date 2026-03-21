@@ -381,7 +381,10 @@ namespace simulace
             switch (ud.co)
             {
                 case TypUdalosti.Start:
-                    PouzijSuperschopnosti();
+
+                    //if (Nakupy.Count > 1) PouzijSuperschopnosti();
+
+                    int druh = P % 3;
 
                     if (Nakupy.Count == 0)
                     // ma nakoupeno
@@ -391,6 +394,14 @@ namespace simulace
                             //log("-------------- odchází"); // nic, konci
                             //Console.WriteLine("DKZSVOD = " + (model.Cas - prichod));
                             Program.all_DKZSVOD.Add(model.Cas - prichod);
+
+                            /*
+                            int casVObchode = model.Cas - prichod;
+
+                            if (druh == 0) Program.casy_Druh0.Add(casVObchode);
+                            else if (druh == 1) Program.casy_Druh1.Add(casVObchode);
+                            else if (druh == 2) Program.casy_Druh2.Add(casVObchode);
+                            */
                         }
 
                         else
@@ -403,7 +414,10 @@ namespace simulace
                         if (pat == patro) // to oddeleni je v patre, kde prave jsem
                         {
                             if (Nakupy.Count > 1)
+                            { 
+                                
                                 model.Naplanuj(model.Cas + trpelivost, this, TypUdalosti.Trpelivost);
+                            }
                             odd.ZaradDoFronty(this);
                         }
                         else
@@ -430,7 +444,7 @@ namespace simulace
                     Nakupy.Add(nesplneny);
 
                     // ...a budu hledat dalsi nakup -->> Start
-                    model.Naplanuj(model.Cas, this, TypUdalosti.Start);
+                    model.Naplanuj(model.Cas+1, this, TypUdalosti.Start);
                     break;
             }
         }
@@ -441,7 +455,7 @@ namespace simulace
 
             int druh = P % 3;
 
-            switch (P)
+            switch (P%3)
             {
                 case 2:
             
@@ -558,6 +572,8 @@ namespace simulace
 
     public class inputFile
     {
+        public static Random rnd = new Random(12345);
+
         public static void generateFile(int customerAmount)
         {
             System.IO.StreamWriter soubor = new System.IO.StreamWriter("obchod_data.txt");
@@ -582,7 +598,7 @@ namespace simulace
             soubor.WriteLine(" Zákazníci:");
             soubor.WriteLine("==========");
 
-            Random rnd = new Random(12345);
+            
 
             List<string> mena = new List<string>
             {
@@ -596,7 +612,7 @@ namespace simulace
             {
                 string customerName = mena[rnd.Next(mena.Count)];
 
-                int arrival = rnd.Next(1, 601);
+                int arrival = rnd.Next(0, 601);
                 int patience = rnd.Next(1, 181);
                 int storeCount = rnd.Next(1, 21);
 
@@ -647,33 +663,46 @@ namespace simulace
         public static List<int> all_DKZSVOD = new List<int> { };
         public static List<double> all_PDKZSVOD = new List<double> { };
 
+        public static List<int> casy_Druh0 = new List<int>(); // S2 (fronty)
+        public static List<int> casy_Druh1 = new List<int>(); // Bez schopnosti
+        public static List<int> casy_Druh2 = new List<int>(); // S1 (poschodia)
+
         static void Main(string[] args)
         {
-            for (int k = 1; k < 50; k++)
+            
+
+            for (int k = 1; k <= 501; k+=10)
             {
+                all_PDKZSVOD.Clear();
+
                 for (int i = 1; i <= 10; i++)
                 {
-                    inputFile.generateFile(k+1);
+                    Zakaznik.globalniPocitadlo = 1;
+                    all_DKZSVOD.Clear();
+
+                    inputFile.generateFile(k);
 
                     Model model = new Model();
                     model.Vypocet();
                     //Console.WriteLine("{0} KONEC --------------------------------", model.Vypocet());
 
-                    double PDKZSVOD = all_DKZSVOD.Average();
-
-                    if (i != 1 && i != 10)
+                    if (all_DKZSVOD.Count > 0) 
                     {
-                        all_PDKZSVOD.Add(PDKZSVOD);
-
+                        double PDKZSVOD = all_DKZSVOD.Average();
+                        all_PDKZSVOD.Add(all_DKZSVOD.Average()); 
                     }
-
-                    //Console.WriteLine("PDKZSVOD = " + PDKZSVOD);
                 }
 
-                double avg_PDSZKVOD = all_PDKZSVOD.Average();
+                if (all_PDKZSVOD.Count >= 3)
+                {
+                    all_PDKZSVOD.Sort();
+                    all_PDKZSVOD.RemoveAt(0);
+                    all_PDKZSVOD.RemoveAt(all_PDKZSVOD.Count - 1);
+                    double avg_PDSZKVOD = all_PDKZSVOD.Average();
+                    Console.WriteLine("Average PDSZKVOD value for " + k + " test case is " + avg_PDSZKVOD);
+                }
 
-                //Console.WriteLine();
-                Console.WriteLine("Average PDSZKVOD value for this test case is " + avg_PDSZKVOD);
+                
             }
 
             Console.ReadLine();

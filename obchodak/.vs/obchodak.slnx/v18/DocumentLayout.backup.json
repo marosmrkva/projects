@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\matus\\Desktop\\lock in simulator2\\ce_hastag\\obchodak\\",
+  "WorkspaceRootPath": "C:\\Users\\matus\\projects\\obchodak\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{23DAAE93-BD61-4945-8C43-8439F18AD88A}|obchodak\\obchodak.csproj|c:\\users\\matus\\desktop\\lock in simulator2\\ce_hastag\\obchodak\\obchodak\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{23DAAE93-BD61-4945-8C43-8439F18AD88A}|obchodak\\obchodak.csproj|c:\\users\\matus\\projects\\obchodak\\obchodak\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23DAAE93-BD61-4945-8C43-8439F18AD88A}|obchodak\\obchodak.csproj|solutionrelative:obchodak\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,13 +28,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\matus\\Desktop\\lock in simulator2\\ce_hastag\\obchodak\\obchodak\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\matus\\projects\\obchodak\\obchodak\\Program.cs",
               "RelativeDocumentMoniker": "obchodak\\Program.cs",
-              "ToolTip": "C:\\Users\\matus\\Desktop\\lock in simulator2\\ce_hastag\\obchodak\\obchodak\\Program.cs",
+              "ToolTip": "C:\\Users\\matus\\projects\\obchodak\\obchodak\\Program.cs",
               "RelativeToolTip": "obchodak\\Program.cs",
-              "ViewState": "AgIAAO0BAAAAAAAAAAAiwA8CAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8CAAAAAAAAAAAQwKsCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T21:42:25.665Z",
+              "WhenOpened": "2026-03-21T21:27:55.459Z",
               "EditorCaption": ""
             }
           ]

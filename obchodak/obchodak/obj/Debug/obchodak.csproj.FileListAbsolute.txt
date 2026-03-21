@@ -13,3 +13,10 @@ C:\Users\kikip\projects\obchodak\obchodak\obj\Debug\obchodak.exe.config
 C:\Users\kikip\projects\obchodak\obchodak\obj\Debug\obchodak.csproj.CoreCompileInputs.cache
 C:\Users\kikip\projects\obchodak\obchodak\obj\Debug\obchodak.exe
 C:\Users\kikip\projects\obchodak\obchodak\obj\Debug\obchodak.pdb
+C:\Users\matus\projects\obchodak\obchodak\bin\Debug\obchodak.exe.config
+C:\Users\matus\projects\obchodak\obchodak\bin\Debug\obchodak.exe
+C:\Users\matus\projects\obchodak\obchodak\bin\Debug\obchodak.pdb
+C:\Users\matus\projects\obchodak\obchodak\obj\Debug\obchodak.csproj.AssemblyReference.cache
+C:\Users\matus\projects\obchodak\obchodak\obj\Debug\obchodak.csproj.CoreCompileInputs.cache
+C:\Users\matus\projects\obchodak\obchodak\obj\Debug\obchodak.exe
+C:\Users\matus\projects\obchodak\obchodak\obj\Debug\obchodak.pdb
