@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace Sidequest
 {
@@ -19,15 +20,26 @@ namespace Sidequest
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public ObservableCollection<Quest> listQuests { get; set; }
+
         public bool isAnimating = false;
         public bool canResize = false;
 
         private double _anchorRight;
         private double _anchorBottom;
 
+        public static bool isMouseInside = false;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            listQuests = new ObservableCollection<Quest>();
+
+            listQuests.Add(new Quest {QuestName = "Zajebat mravce"});
+
+            this.DataContext = this;
 
             var desktopWorkingArea = SystemParameters.WorkArea;
 
@@ -36,7 +48,6 @@ namespace Sidequest
 
             _anchorRight = desktopWorkingArea.Right - 20;
             _anchorBottom = desktopWorkingArea.Bottom - 20;
-            
 
             this.Left = _anchorRight - this.Width;
             this.Top = _anchorBottom - this.Height;
@@ -44,20 +55,37 @@ namespace Sidequest
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Quest newQuest = new Quest();
+            newQuest.QuestName = "Ideme zajebať mravce!!!";
 
+            listQuests.Add(newQuest);
         }
+
 
         private void Window_Expand(object sender, MouseEventArgs e)
         {
-            if (this.Width > 290 && this.Height > 290) return;
+            isMouseInside = true;
             animateWindow(300);
         }
 
-        private void Window_Collapse(object sender, MouseEventArgs e)
+        private async void Window_Collapse(object sender, MouseEventArgs e)
         {
-            if (this.Width < 50 && this.Height < 50) return;
+            isMouseInside = false;
+
+            await Task.Delay(500);
+
+            if (isMouseInside) return;
+
             animateWindow(40);
         }
+
+        private void isMouseInApp(object sender, MouseEventArgs e)
+        {
+            isMouseInside = !isMouseInside;
+        }
+
+
+
 
         private void animateProperty(DependencyProperty prop, double targetSize)
         {
@@ -88,5 +116,6 @@ namespace Sidequest
 
             Thread.Sleep(250);
         }
+        
     }
 }

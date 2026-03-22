@@ -137,20 +137,40 @@
 
 
         <Grid>
+
+            <ListBox ItemsSource="{Binding listQuests}"
+                     Margin="10,10,10,10" 
+                     BorderBrush="#121212" 
+                     Background="#121212">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding QuestName}" Foreground="White" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
             
-            <Button Style="{DynamicResource ButtonStyle1}" 
-                Content="+" 
-                FontSize="30"
-                FontWeight="Bold"
+            
+            <Button Style="{DynamicResource ButtonStyle1}"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Margin="251,251,0,0" 
-                Background="#6e6e6e" 
+                Margin="251,251,0,0"
+                Background="#6e6e6e"
                 BorderThickness="0"
                 Cursor="Hand"
-                Height="35" 
-                Width="35" Click="Button_Click"/>
-            
+                Height="35"
+                Width="35" 
+                Click="Button_Click">
+
+                <Path Data="M0,7 H14 M7,0 V14" 
+                    Stroke="Black" 
+                    StrokeThickness="3" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Width="14" 
+                    Height="14" />
+                
+            </Button>
+
         </Grid>
 
     </Border>
