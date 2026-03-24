@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using System.Runtime;
 
 namespace Sidequest
 {
@@ -37,8 +38,6 @@ namespace Sidequest
 
             listQuests = new ObservableCollection<Quest>();
 
-            listQuests.Add(new Quest {QuestName = "Zajebat mravce"});
-
             this.DataContext = this;
 
             var desktopWorkingArea = SystemParameters.WorkArea;
@@ -55,12 +54,28 @@ namespace Sidequest
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Quest newQuest = new Quest();
-            newQuest.QuestName = "Ideme zajebať mravce!!!";
+            NewQuestEntry.Visibility = Visibility.Visible;
 
-            listQuests.Add(newQuest);
+            
         }
 
+
+        private void SaveNewQuest(object sender, RoutedEventArgs e)
+        {
+            string newQuestName = NewQuestEntryTextBox.Text;
+
+            if (string.IsNullOrWhiteSpace(newQuestName)) return;
+
+            Quest newQuest = new Quest();
+            newQuest.QuestName = newQuestName;
+            listQuests.Add(newQuest);
+
+            NewQuestEntryTextBox.Text = "";
+
+            NewQuestEntry.Visibility = Visibility.Collapsed;
+
+        }
+        
 
         private void Window_Expand(object sender, MouseEventArgs e)
         {

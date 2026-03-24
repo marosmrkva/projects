@@ -10,7 +10,9 @@
         Topmost="True" 
         ShowInTaskbar="False"
         ResizeMode="NoResize"
-        Background="Transparent" 
+        Background="Transparent"
+        MouseEnter="Window_Expand"
+        MouseLeave="Window_Collapse"
         Height="320" Width="320">
     <Window.Resources>
         <Style x:Key="FocusVisual">
@@ -131,8 +133,7 @@
         BorderThickness="2" 
         CornerRadius="10"
         Background="#121212"
-        MouseEnter="Window_Expand"
-        MouseLeave="Window_Collapse">
+        >
         
 
 
@@ -141,13 +142,38 @@
             <ListBox ItemsSource="{Binding listQuests}"
                      Margin="10,10,10,10" 
                      BorderBrush="#121212" 
-                     Background="#121212">
+                     Background="#121212"
+                     ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding QuestName}" Foreground="White" />
+                        <Grid>
+                            <TextBlock Text="{Binding QuestName}" Foreground="White" />
+                        </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+
+
+            <StackPanel
+                x:Name="NewQuestEntry"
+                Visibility="Collapsed"
+                VerticalAlignment="Bottom">
+                <TextBox
+                    x:Name="NewQuestEntryTextBox"
+                    Width="260"
+                    Background="#121212"
+                    Foreground="White"
+                />
+
+                <Button 
+                    Content="Save" 
+                    Click="SaveNewQuest"
+                    Width="50"
+                    Background="#6e6e6e"
+                    FontWeight="Bold"
+                />
+                
+            </StackPanel>
             
             
             <Button Style="{DynamicResource ButtonStyle1}"

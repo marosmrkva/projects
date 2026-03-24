@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Sidequest\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\matus\\projects\\sidequest\\Sidequest\\Sidequest\\MainWindow.xaml.cs",
               "RelativeToolTip": "Sidequest\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwCYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAIwEgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-19T19:24:37.911Z",
               "IsPinned": true,
@@ -48,18 +48,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\matus\\projects\\sidequest\\Sidequest\\Sidequest\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Sidequest\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\matus\\projects\\sidequest\\Sidequest\\Sidequest\\MainWindow.xaml",
-              "RelativeToolTip": "Sidequest\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-19T19:24:39.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Quest.cs",
               "DocumentMoniker": "C:\\Users\\matus\\projects\\sidequest\\Sidequest\\Sidequest\\Quest.cs",
@@ -69,6 +57,18 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-22T21:30:48.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\matus\\projects\\sidequest\\Sidequest\\Sidequest\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Sidequest\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\matus\\projects\\sidequest\\Sidequest\\Sidequest\\MainWindow.xaml",
+              "RelativeToolTip": "Sidequest\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-19T19:24:39.825Z",
               "EditorCaption": ""
             }
           ]
