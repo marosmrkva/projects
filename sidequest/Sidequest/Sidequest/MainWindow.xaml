@@ -134,10 +134,11 @@
         CornerRadius="10"
         Background="#121212"
         >
-        
 
 
-        <Grid>
+
+        <Grid
+            x:Name="MainGrid">
 
             <ListBox ItemsSource="{Binding listQuests}"
                      Margin="10,10,10,10" 
@@ -148,6 +149,7 @@
                     <DataTemplate>
                         <Grid>
                             <TextBlock Text="{Binding QuestName}" Foreground="White" />
+                            <TextBlock Text="{Binding deadline}" Foreground="White" Margin="0, 15, 0, 0"/>
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -158,12 +160,25 @@
                 x:Name="NewQuestEntry"
                 Visibility="Collapsed"
                 VerticalAlignment="Bottom">
+
                 <TextBox
                     x:Name="NewQuestEntryTextBox"
                     Width="260"
                     Background="#121212"
                     Foreground="White"
                 />
+
+                <TextBox
+                    x:Name="NewQuestContentTextBox"
+                    Width="260"
+                    Height="30"
+                    Background="#121212"
+                    Foreground="White"/>
+                
+                <DatePicker
+                    x:Name="NewQuestDeadlineDate"
+                    Text=""
+                    Width="150"/>
 
                 <Button 
                     Content="Save" 
@@ -172,10 +187,10 @@
                     Background="#6e6e6e"
                     FontWeight="Bold"
                 />
-                
+
             </StackPanel>
-            
-            
+
+
             <Button Style="{DynamicResource ButtonStyle1}"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
@@ -194,7 +209,28 @@
                     VerticalAlignment="Center" 
                     Width="14" 
                     Height="14" />
-                
+
+            </Button>
+
+            <Button Style="{DynamicResource ButtonStyle1}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="271,10,0,0"
+                Background="#2a2a2a"
+                BorderThickness="0"
+                Cursor="Hand"
+                Height="15"
+                Width="15" 
+                Click="Button_Exit">
+
+                <Path Data="M0,7 H14 M7,0 V14" 
+                    Stroke="Black" 
+                    StrokeThickness="2" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Width="5" 
+                    Height="5" />
+
             </Button>
 
         </Grid>
