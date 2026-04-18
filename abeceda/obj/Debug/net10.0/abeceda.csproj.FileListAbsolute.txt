@@ -1,0 +1,15 @@
+/Users/matusgromnica/projects/abeceda/bin/Debug/net10.0/abeceda
+/Users/matusgromnica/projects/abeceda/bin/Debug/net10.0/abeceda.deps.json
+/Users/matusgromnica/projects/abeceda/bin/Debug/net10.0/abeceda.runtimeconfig.json
+/Users/matusgromnica/projects/abeceda/bin/Debug/net10.0/abeceda.dll
+/Users/matusgromnica/projects/abeceda/bin/Debug/net10.0/abeceda.pdb
+/Users/matusgromnica/projects/abeceda/obj/Debug/net10.0/abeceda.GeneratedMSBuildEditorConfig.editorconfig
+/Users/matusgromnica/projects/abeceda/obj/Debug/net10.0/abeceda.AssemblyInfoInputs.cache
+/Users/matusgromnica/projects/abeceda/obj/Debug/net10.0/abeceda.AssemblyInfo.cs
+/Users/matusgromnica/projects/abeceda/obj/Debug/net10.0/abeceda.csproj.CoreCompileInputs.cache
+/Users/matusgromnica/projects/abeceda/obj/Debug/net10.0/abeceda.sourcelink.json
+/Users/matusgromnica/projects/abeceda/obj/Debug/net10.0/abeceda.dll
+/Users/matusgromnica/projects/abeceda/obj/Debug/net10.0/refint/abeceda.dll
+/Users/matusgromnica/projects/abeceda/obj/Debug/net10.0/abeceda.pdb
+/Users/matusgromnica/projects/abeceda/obj/Debug/net10.0/abeceda.genruntimeconfig.cache
+/Users/matusgromnica/projects/abeceda/obj/Debug/net10.0/ref/abeceda.dll
