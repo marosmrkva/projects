@@ -1,0 +1,70 @@
+ Vstupní data pro simulaci obchodního domu
+=========================================
+
+ Oddělení:
+=========
+O papírnictví 0 5
+O potraviny 0 15
+O drogerie 0 6
+O textil 1 15
+O nábytek 2 20
+O elektronika 3 5
+O CD-DVD 3 4
+
+ Výtah:
+======
+V elefant 10 1 1 1
+
+ Zákazníci:
+==========
+Z Beáta 43 140 elektronika elektronika potraviny elektronika potraviny textil potraviny drogerie potraviny papírnictví papírnictví
+Z Šimon 118 160 drogerie papírnictví textil drogerie nábytek nábytek nábytek elektronika elektronika drogerie potraviny nábytek potraviny textil textil potraviny elektronika papírnictví
+Z Marek 269 88 textil potraviny potraviny nábytek drogerie drogerie elektronika potraviny elektronika nábytek nábytek textil textil papírnictví textil
+Z Sára 41 168 papírnictví drogerie drogerie papírnictví
+Z Urban 12 157 elektronika drogerie elektronika nábytek textil drogerie nábytek nábytek potraviny papírnictví papírnictví potraviny potraviny CD-DVD nábytek
+Z Ondrej 361 13 papírnictví textil elektronika papírnictví CD-DVD textil potraviny drogerie drogerie papírnictví potraviny textil nábytek drogerie nábytek papírnictví
+Z Urban 69 168 papírnictví elektronika drogerie potraviny
+Z Quido 597 117 potraviny elektronika elektronika drogerie elektronika potraviny elektronika potraviny papírnictví drogerie elektronika potraviny potraviny CD-DVD drogerie textil papírnictví nábytek textil
+Z Xénia 368 144 textil nábytek CD-DVD nábytek potraviny papírnictví textil drogerie CD-DVD CD-DVD drogerie potraviny textil drogerie elektronika nábytek
+Z Jakub 346 66 textil
+Z Hana 466 2 textil elektronika
+Z Gregor 15 97 drogerie drogerie papírnictví drogerie elektronika elektronika textil nábytek potraviny nábytek CD-DVD CD-DVD potraviny elektronika elektronika CD-DVD
+Z František 99 162 potraviny potraviny
+Z Tomáš 153 22 CD-DVD nábytek nábytek potraviny potraviny drogerie drogerie papírnictví papírnictví elektronika drogerie CD-DVD papírnictví CD-DVD elektronika CD-DVD potraviny drogerie
+Z Quido 270 95 potraviny nábytek nábytek papírnictví
+Z Čestmír 268 91 nábytek elektronika
+Z František 513 175 papírnictví CD-DVD textil textil textil papírnictví elektronika papírnictví textil potraviny papírnictví papírnictví potraviny drogerie papírnictví drogerie nábytek nábytek drogerie
+Z Sára 205 16 papírnictví potraviny CD-DVD nábytek CD-DVD papírnictví textil nábytek potraviny CD-DVD CD-DVD CD-DVD potraviny
+Z Žigmund 88 178 drogerie potraviny papírnictví drogerie papírnictví papírnictví potraviny papírnictví
+Z Žigmund 188 37 textil potraviny nábytek CD-DVD drogerie drogerie potraviny textil textil elektronika CD-DVD papírnictví
+Z Peter 497 28 textil CD-DVD drogerie textil nábytek CD-DVD drogerie papírnictví
+Z Beáta 177 3 elektronika textil CD-DVD elektronika
+Z Ivan 77 136 drogerie CD-DVD CD-DVD nábytek CD-DVD textil CD-DVD textil potraviny papírnictví elektronika potraviny CD-DVD
+Z Tomáš 377 20 elektronika CD-DVD textil CD-DVD textil CD-DVD papírnictví drogerie papírnictví elektronika CD-DVD elektronika potraviny nábytek textil papírnictví textil papírnictví textil
+Z Žigmund 480 98 papírnictví elektronika elektronika papírnictví
+Z Nina 483 46 CD-DVD
+Z Xénia 511 110 potraviny nábytek elektronika papírnictví elektronika
+Z Eliška 554 138 elektronika papírnictví drogerie drogerie papírnictví drogerie nábytek papírnictví papírnictví papírnictví potraviny nábytek textil potraviny nábytek CD-DVD textil nábytek elektronika
+Z Šimon 69 175 papírnictví potraviny elektronika CD-DVD potraviny drogerie papírnictví
+Z Peter 372 79 papírnictví elektronika nábytek potraviny
+Z Radovan 512 58 elektronika elektronika drogerie textil elektronika drogerie potraviny potraviny drogerie nábytek potraviny papírnictví elektronika elektronika elektronika potraviny
+Z Cyril 179 94 elektronika CD-DVD textil textil potraviny potraviny potraviny CD-DVD potraviny
+Z Gregor 544 164 drogerie potraviny nábytek nábytek nábytek papírnictví textil papírnictví
+Z Dávid 473 176 drogerie drogerie potraviny CD-DVD drogerie papírnictví drogerie drogerie CD-DVD papírnictví
+Z Tomáš 108 157 textil potraviny potraviny papírnictví papírnictví elektronika
+Z František 390 78 potraviny nábytek textil potraviny papírnictví drogerie textil potraviny textil papírnictví CD-DVD
+Z Yvona 575 2 potraviny textil nábytek textil drogerie textil drogerie elektronika drogerie textil potraviny elektronika papírnictví elektronika potraviny potraviny elektronika
+Z Zuzana 433 128 nábytek papírnictví potraviny nábytek textil nábytek nábytek elektronika drogerie nábytek potraviny potraviny potraviny CD-DVD potraviny nábytek
+Z Dávid 66 17 elektronika papírnictví nábytek elektronika textil textil textil drogerie CD-DVD papírnictví CD-DVD potraviny drogerie papírnictví textil drogerie
+Z Hana 546 156 elektronika papírnictví CD-DVD CD-DVD CD-DVD nábytek CD-DVD elektronika papírnictví textil nábytek elektronika nábytek CD-DVD CD-DVD nábytek textil textil
+Z Čestmír 9 20 CD-DVD potraviny nábytek papírnictví CD-DVD potraviny drogerie
+Z Tomáš 214 45 potraviny CD-DVD elektronika papírnictví elektronika
+Z Urban 523 100 potraviny drogerie textil papírnictví nábytek drogerie papírnictví CD-DVD CD-DVD CD-DVD elektronika elektronika elektronika
+Z Marek 83 125 CD-DVD nábytek nábytek textil drogerie potraviny drogerie
+Z Peter 240 167 textil elektronika nábytek
+Z František 279 85 textil elektronika
+Z Nina 241 100 textil elektronika textil
+Z Lukáš 241 85 nábytek drogerie drogerie elektronika potraviny elektronika potraviny CD-DVD potraviny potraviny
+Z Ondrej 128 83 drogerie potraviny potraviny textil drogerie drogerie drogerie nábytek CD-DVD elektronika nábytek papírnictví nábytek CD-DVD textil nábytek CD-DVD potraviny CD-DVD
+Z Karolína 282 30 elektronika papírnictví nábytek potraviny papírnictví drogerie textil
+Z Zuzana 114 17 potraviny nábytek potraviny CD-DVD

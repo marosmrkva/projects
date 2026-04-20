@@ -1,0 +1,7 @@
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\cviko3\cviko3\bin\Debug\cviko3.exe.config
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\cviko3\cviko3\bin\Debug\cviko3.exe
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\cviko3\cviko3\bin\Debug\cviko3.pdb
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\cviko3\cviko3\obj\Debug\cviko3.csproj.AssemblyReference.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\cviko3\cviko3\obj\Debug\cviko3.csproj.CoreCompileInputs.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\cviko3\cviko3\obj\Debug\cviko3.exe
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\cviko3\cviko3\obj\Debug\cviko3.pdb

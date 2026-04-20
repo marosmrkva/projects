@@ -382,7 +382,7 @@ namespace simulace
             {
                 case TypUdalosti.Start:
 
-                    //if (Nakupy.Count > 1) PouzijSuperschopnosti();
+                    if (Nakupy.Count > 1) PouzijSuperschopnosti();
 
                     int druh = P % 3;
 
@@ -393,15 +393,15 @@ namespace simulace
                         {
                             //log("-------------- odchází"); // nic, konci
                             //Console.WriteLine("DKZSVOD = " + (model.Cas - prichod));
-                            Program.all_DKZSVOD.Add(model.Cas - prichod);
+                            //Program.all_DKZSVOD.Add(model.Cas - prichod);
 
-                            /*
+                            
                             int casVObchode = model.Cas - prichod;
 
                             if (druh == 0) Program.casy_Druh0.Add(casVObchode);
                             else if (druh == 1) Program.casy_Druh1.Add(casVObchode);
                             else if (druh == 2) Program.casy_Druh2.Add(casVObchode);
-                            */
+                            
                         }
 
                         else
@@ -660,25 +660,31 @@ namespace simulace
 
     class Program
     {
-        public static List<int> all_DKZSVOD = new List<int> { };
-        public static List<double> all_PDKZSVOD = new List<double> { };
+        //public static List<int> all_DKZSVOD = new List<int> { };
+        //public static List<double> all_PDKZSVOD = new List<double> { };
 
-        public static List<int> casy_Druh0 = new List<int>(); // S2 (fronty)
         public static List<int> casy_Druh1 = new List<int>(); // Bez schopnosti
         public static List<int> casy_Druh2 = new List<int>(); // S1 (poschodia)
+        public static List<int> casy_Druh0 = new List<int>(); // S2 (fronty)
 
         static void Main(string[] args)
         {
             
 
-            for (int k = 1; k <= 501; k+=10)
+            for (int k = 11; k <= 501; k+=10)
             {
-                all_PDKZSVOD.Clear();
+                //all_PDKZSVOD.Clear();
+                List<double> DKZSVOD_0 = new List<double>();
+                List<double> DKZSVOD_1 = new List<double>();
+                List<double> DKZSVOD_2 = new List<double>();
 
                 for (int i = 1; i <= 10; i++)
                 {
                     Zakaznik.globalniPocitadlo = 1;
-                    all_DKZSVOD.Clear();
+                    //all_DKZSVOD.Clear();
+                    casy_Druh1.Clear();
+                    casy_Druh2.Clear();
+                    casy_Druh0.Clear();
 
                     inputFile.generateFile(k);
 
@@ -686,13 +692,24 @@ namespace simulace
                     model.Vypocet();
                     //Console.WriteLine("{0} KONEC --------------------------------", model.Vypocet());
 
+                    if (casy_Druh0.Count > 0) DKZSVOD_0.Add(casy_Druh0.Average());
+                    if (casy_Druh1.Count > 0) DKZSVOD_1.Add(casy_Druh1.Average());
+                    if (casy_Druh2.Count > 0) DKZSVOD_2.Add(casy_Druh2.Average());
+
+                    /*
                     if (all_DKZSVOD.Count > 0) 
                     {
                         double PDKZSVOD = all_DKZSVOD.Average();
                         all_PDKZSVOD.Add(all_DKZSVOD.Average()); 
                     }
+                    */
                 }
 
+                double PDKZSVOD_0 = CleanAvg(DKZSVOD_0);
+                double PDKZSVOD_1 = CleanAvg(DKZSVOD_1);
+                double PDKZSVOD_2 = CleanAvg(DKZSVOD_2);
+
+                /*
                 if (all_PDKZSVOD.Count >= 3)
                 {
                     all_PDKZSVOD.Sort();
@@ -701,11 +718,31 @@ namespace simulace
                     double avg_PDSZKVOD = all_PDKZSVOD.Average();
                     Console.WriteLine("Average PDSZKVOD value for " + k + " test case is " + avg_PDSZKVOD);
                 }
+                */
 
-                
+                Console.WriteLine($"{k}; {Math.Round(PDKZSVOD_1, 2)}; {Math.Round(PDKZSVOD_2, 2)}; {Math.Round(PDKZSVOD_0, 2)}");
+
             }
 
             Console.ReadLine();
+        }
+
+        static double CleanAvg(List<double> all_DKZSVOD_with_superpowers)
+        {
+            if (all_DKZSVOD_with_superpowers.Count >= 3)
+            {
+                all_DKZSVOD_with_superpowers.Sort();
+                all_DKZSVOD_with_superpowers.RemoveAt(0);
+                all_DKZSVOD_with_superpowers.RemoveAt(all_DKZSVOD_with_superpowers.Count - 1);
+                return all_DKZSVOD_with_superpowers.Average();
+            }
+            else if (all_DKZSVOD_with_superpowers.Count > 0)
+            {
+                return all_DKZSVOD_with_superpowers.Average();
+            }
+
+
+            return 0;
         }
     }
 }

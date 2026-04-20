@@ -9,8 +9,9 @@ namespace Sidequest
     {
         public string QuestName { get; set; }
         public string QuestContents { get; set; }
-        public bool isCompleted = false;
-        public DateTime deadline { get; set; }
+
+        public bool IsCompleted = false;
+        public DateTime Deadline { get; set; }
 
     }
 }

@@ -1,0 +1,14 @@
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\bin\Debug\net10.0\skladnik2.exe
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\bin\Debug\net10.0\skladnik2.deps.json
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\bin\Debug\net10.0\skladnik2.runtimeconfig.json
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\bin\Debug\net10.0\skladnik2.dll
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\bin\Debug\net10.0\skladnik2.pdb
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\obj\Debug\net10.0\skladnik2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\obj\Debug\net10.0\skladnik2.AssemblyInfoInputs.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\obj\Debug\net10.0\skladnik2.AssemblyInfo.cs
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\obj\Debug\net10.0\skladnik2.csproj.CoreCompileInputs.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\obj\Debug\net10.0\skladnik2.dll
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\obj\Debug\net10.0\refint\skladnik2.dll
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\obj\Debug\net10.0\skladnik2.pdb
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\obj\Debug\net10.0\skladnik2.genruntimeconfig.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\skladnik2\skladnik2\obj\Debug\net10.0\ref\skladnik2.dll

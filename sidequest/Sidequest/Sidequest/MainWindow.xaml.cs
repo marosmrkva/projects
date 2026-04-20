@@ -77,7 +77,7 @@ namespace Sidequest
                             Quest loadedQuest = new Quest();
 
                             loadedQuest.QuestName = loadQuest[0];
-                            loadedQuest.deadline = Convert.ToDateTime(loadQuest[1]);
+                            loadedQuest.Deadline = Convert.ToDateTime(loadQuest[1]);
                             loadedQuest.QuestContents = loadQuest[2];
 
                             listQuests.Add(loadedQuest);
@@ -106,7 +106,7 @@ namespace Sidequest
 
             Quest newQuest = new Quest();
             newQuest.QuestName = newQuestName;
-            newQuest.deadline = newQuestDeadline;
+            newQuest.Deadline = newQuestDeadline;
             newQuest.QuestContents = newQuestContent;
             listQuests.Add(newQuest);
 

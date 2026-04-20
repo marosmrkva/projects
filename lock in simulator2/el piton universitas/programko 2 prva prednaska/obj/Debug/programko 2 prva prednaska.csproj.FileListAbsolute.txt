@@ -1,0 +1,8 @@
+C:\Users\matus\Desktop\lock in simulator\el piton universitas\programko 2 prva prednaska\bin\Debug\programko 2 prva prednaska.exe.config
+C:\Users\matus\Desktop\lock in simulator\el piton universitas\programko 2 prva prednaska\bin\Debug\programko 2 prva prednaska.exe
+C:\Users\matus\Desktop\lock in simulator\el piton universitas\programko 2 prva prednaska\bin\Debug\programko 2 prva prednaska.pdb
+C:\Users\matus\Desktop\lock in simulator\el piton universitas\programko 2 prva prednaska\obj\Debug\programko 2 prva prednaska.csproj.AssemblyReference.cache
+C:\Users\matus\Desktop\lock in simulator\el piton universitas\programko 2 prva prednaska\obj\Debug\programko 2 prva prednaska.csproj.CoreCompileInputs.cache
+C:\Users\matus\Desktop\lock in simulator\el piton universitas\programko 2 prva prednaska\obj\Debug\programko 2 prva prednaska.exe
+C:\Users\matus\Desktop\lock in simulator\el piton universitas\programko 2 prva prednaska\obj\Debug\programko 2 prva prednaska.pdb
+C:\Users\matus\Desktop\lock in simulator\el piton universitas\programko 2 prva prednaska\obj\Debug\programko 2 prva prednaska.exe.config

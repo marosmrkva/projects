@@ -1,0 +1,10 @@
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\pexeso_gui\pexeso_gui\bin\Debug\pexeso_gui.exe.config
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\pexeso_gui\pexeso_gui\bin\Debug\pexeso_gui.exe
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\pexeso_gui\pexeso_gui\bin\Debug\pexeso_gui.pdb
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\pexeso_gui\pexeso_gui\obj\Debug\pexeso_gui.csproj.AssemblyReference.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\pexeso_gui\pexeso_gui\obj\Debug\pexeso_gui.Form1.resources
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\pexeso_gui\pexeso_gui\obj\Debug\pexeso_gui.Properties.Resources.resources
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\pexeso_gui\pexeso_gui\obj\Debug\pexeso_gui.csproj.GenerateResource.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\pexeso_gui\pexeso_gui\obj\Debug\pexeso_gui.csproj.CoreCompileInputs.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\pexeso_gui\pexeso_gui\obj\Debug\pexeso_gui.exe
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\pexeso_gui\pexeso_gui\obj\Debug\pexeso_gui.pdb

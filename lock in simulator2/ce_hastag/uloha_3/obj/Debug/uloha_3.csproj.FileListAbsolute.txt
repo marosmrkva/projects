@@ -1,0 +1,8 @@
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\uloha_3\bin\Debug\uloha_3.exe.config
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\uloha_3\bin\Debug\uloha_3.exe
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\uloha_3\bin\Debug\uloha_3.pdb
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\uloha_3\obj\Debug\uloha_3.csproj.AssemblyReference.cache
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\uloha_3\obj\Debug\uloha_3.csproj.CoreCompileInputs.cache
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\uloha_3\obj\Debug\uloha_3.exe
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\uloha_3\obj\Debug\uloha_3.pdb
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\uloha_3\obj\Debug\uloha_3.exe.config
