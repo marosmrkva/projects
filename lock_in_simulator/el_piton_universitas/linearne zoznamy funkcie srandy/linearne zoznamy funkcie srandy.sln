@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "linearne zoznamy funkcie srandy", "linearne zoznamy funkcie srandy.pyproj", "{883002C9-5912-49FF-A87B-59625D6F8764}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{883002C9-5912-49FF-A87B-59625D6F8764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{883002C9-5912-49FF-A87B-59625D6F8764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10CA2A9D-C2E4-4247-A282-45C9AE596462}
+	EndGlobalSection
+EndGlobal

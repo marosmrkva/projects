@@ -1,0 +1,112 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace kral;
+
+class King
+{
+    public static int KingsPath()
+    {
+        bool[,] chessboard = new bool[8, 8];
+
+        int obstacles = Convert.ToInt32(Console.ReadLine());
+
+
+        for (int i = 0; i < obstacles; i++)
+        {
+            string[] input = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            int x = Convert.ToInt32(input[0]) - 1;
+            int y = Convert.ToInt32(input[1]) - 1;
+            chessboard[y, x] = true;
+        }
+
+        string[] startPos = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+        int startX = Convert.ToInt32(startPos[0]) - 1;
+        int startY = Convert.ToInt32(startPos[1]) - 1;
+        string[] endPos = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+        int endX = Convert.ToInt32(endPos[0]) - 1;
+        int endY = Convert.ToInt32(endPos[1]) - 1;
+
+        Queue<(int, int, int)> movesQueue = new Queue<(int, int, int)>();
+        movesQueue.Enqueue((startX, startY, 0));
+
+
+        while (movesQueue.Count > 0)
+        {
+            (int currX, int currY, int pathLength) = movesQueue.Dequeue();
+
+            if ((currX, currY) == (endX, endY))
+            {
+                return pathLength;
+            }
+
+            foreach (int moveX in (int[])[-1, 0, 1])
+            {
+                foreach (int moveY in (int[])[-1, 0, 1])
+                {
+                    if ((moveX, moveY) == (0, 0))
+                    {
+                        continue;
+                    }
+                    int newX = currX + moveX;
+                    int newY = currY + moveY;
+
+                    if (newX >= 0 && newX < 8 && newY >= 0 && newY < 8)
+                    {
+                        if (chessboard[newY, newX] != true)
+                        {
+                            chessboard[newY, newX] = true;
+                            movesQueue.Enqueue((newX, newY, pathLength + 1));
+                        }
+
+                    }
+                }
+            }
+        }
+
+        return -1;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+        Console.WriteLine(King.KingsPath());
+
+    }
+}
+
+
+
+
+2 8 16 34 49 67 76 83 99
+
+
+
+
+1-3 18 -> 3-7 41 -> 7-9 19 -> 9-10 7
+
+85
+
+======================================
+
+
+1-3 18 -> 3-4 5 -> 4-5 19 -> 5-9 43 -> 9-10 7
+
+92
+
+
+
+======================================
+
+550mm zrazok za rok
+
+48*39 = 1872m*m
+
+1872*550 = 1 029 600 l = kg
+
+
+

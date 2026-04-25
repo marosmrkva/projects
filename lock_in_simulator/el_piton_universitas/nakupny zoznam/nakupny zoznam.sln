@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36717.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "nakupny zoznam", "nakupny zoznam.pyproj", "{FCB955CA-4D21-40A4-B5FD-8E5AFF517A50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCB955CA-4D21-40A4-B5FD-8E5AFF517A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB955CA-4D21-40A4-B5FD-8E5AFF517A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9339374F-394E-4449-940A-CBDD0C0A6610}
+	EndGlobalSection
+EndGlobal

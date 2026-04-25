@@ -1,0 +1,69 @@
+Základné sieťové pojmy a vrstvy:
+
+OSI – Open Systems Interconnection – sedemvrstvový referenčný model pre popis sieťovej komunikácie.
+
+TCP/IP – Transmission Control Protocol / Internet Protocol – praktický štvorvrstvový model rodiny protokolov internetu.
+
+PDU – Protocol Data Unit – všeobecný názov pre dátovú jednotku konkrétnej vrstvy (napr. rámec, paket, segment).
+
+LAN – Local Area Network – lokálna počítačová sieť (napr. v rámci budovy).
+
+WAN – Wide Area Network – rozľahlá sieť spájajúca geograficky vzdialené body.
+
+Adresácia a preklad:
+
+IP – Internet Protocol – protokol sieťovej vrstvy zodpovedný za adresáciu a smerovanie paketov.
+
+IPv4 / IPv6 – verzie protokolu IP (32-bitová vs. 128-bitová adresácia).
+
+MAC – Media Access Control – fyzická adresa sieťového rozhrania (vypálená v HW).
+
+ARP – Address Resolution Protocol – slúži na hľadanie MAC adresy k známej IP adrese v lokálnej sieti.
+
+DNS – Domain Name System – distribuovaná databáza na preklad doménových mien (napr. https://www.google.com/search?q=google.com) na IP adresy.
+
+NAT – Network Address Translation – technológia na preklad privátnych IP adries na verejné (šetrí adresný priestor).
+
+URI / URL – Uniform Resource Identifier / Locator – štandardizovaný formát pre identifikáciu a umiestnenie zdroja na internete.
+
+Transportná vrstva:
+
+TCP – Transmission Control Protocol – spojovo orientovaný a spoľahlivý protokol so zárukou doručenia.
+
+UDP – User Datagram Protocol – nespojový a nespoľahlivý protokol, minimalizuje réžiu (vhodný pre VoIP, hry).
+
+SSL / TLS – Secure Sockets Layer / Transport Layer Security – kryptografické protokoly pre zabezpečenie komunikácie (mezivrstva pod aplikačnými protokolmi).
+
+Elektronická pošta a prenos súborov:
+
+SMTP – Simple Mail Transfer Protocol – protokol na odosielanie a prenos pošty medzi servermi.
+
+POP3 – Post Office Protocol v3 – protokol na sťahovanie pošty zo servera do klientskeho počítača.
+
+IMAP – Internet Message Access Protocol – moderný protokol pre vzdialený prístup k mailboxu a správu priečinkov na serveri.
+
+MIME – Multipurpose Internet Mail Extensions – rozšírenie pošty pre podporu príloh a národných znakov.
+
+MTA / MUA – Mail Transfer Agent / Mail User Agent – poštový server (prenos) vs. poštový klient (používateľské rozhranie).
+
+FTP – File Transfer Protocol – jeden z najstarších protokolov na prenos súborov medzi počítačmi.
+
+Web a multimédiá:
+
+HTTP / HTTPS – Hypertext Transfer Protocol (Secure) – protokol na prenos webových stránok (zabezpečený variant využíva TLS).
+
+HTML – Hypertext Markup Language – značkovací jazyk na tvorbu štruktúry webových stránok.
+
+SIP – Session Initiation Protocol – inicializácia spojenia a dohoda o parametroch (používané pre VoIP telefóniu).
+
+RTP / RTCP – Real-time Transport (Control) Protocol – protokoly na samotný prenos multimediálnych dát (hlas/video).
+
+SDP – Session Description Protocol – popisuje vlastnosti multimediálnych kanálov počas nadväzovania hovoru.
+
+Bezpečnosť:
+
+CA – Certificate Authority – certifikačná autorita, ktorá potvrdzuje identitu subjektov vydávaním certifikátov.
+
+VPN – Virtual Private Network – vytvorenie bezpečného šifrovaného tunela cez verejnú sieť.
+
+OTP – One Time Password – systém jednorazových hesiel pre zvýšenie bezpečnosti autentikácie.

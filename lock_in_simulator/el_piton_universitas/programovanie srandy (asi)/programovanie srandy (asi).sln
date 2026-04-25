@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "programovanie srandy (asi)", "programovanie srandy (asi).pyproj", "{E7B8C20C-2E84-401D-A8F6-2454E696FEC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7B8C20C-2E84-401D-A8F6-2454E696FEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7B8C20C-2E84-401D-A8F6-2454E696FEC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {207AD7DF-F1FE-4C4F-B1BA-C0F76367C722}
+	EndGlobalSection
+EndGlobal

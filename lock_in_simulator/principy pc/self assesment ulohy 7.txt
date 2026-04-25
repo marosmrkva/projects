@@ -1,0 +1,22 @@
+14
+a) A = 267
+b) B = 254
+c) C = -4
+
+24i
+a) 
+LDA $4A04
+STA $4A10
+b) 
+LDA #$FD
+STA $4A04
+LDA #$04
+STA $4A05
+c) 
+LDA $-0x2
+STA $4A10
+
+24ii
+a) A5 0x4A04 85 0x4A10
+b) A9 FD 85 4A04 A9 04 85 4A05
+c) A9 -0x2 85 4A10 

@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\matus\\Desktop\\lock in simulator\\el piton universitas\\kral2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3EE29C5A-75FA-464C-ACE0-3675A3FCBF8C}|kral2.pyproj|C:\\Users\\matus\\Desktop\\lock in simulator\\el piton universitas\\kral2\\kral2.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3EE29C5A-75FA-464C-ACE0-3675A3FCBF8C}|kral2.pyproj|solutionrelative:kral2.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "kral2.py",
+              "DocumentMoniker": "C:\\Users\\matus\\Desktop\\lock in simulator\\el piton universitas\\kral2\\kral2.py",
+              "RelativeDocumentMoniker": "kral2.py",
+              "ToolTip": "C:\\Users\\matus\\Desktop\\lock in simulator\\el piton universitas\\kral2\\kral2.py",
+              "RelativeToolTip": "kral2.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-12-29T11:36:01.672Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

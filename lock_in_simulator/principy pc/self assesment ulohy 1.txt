@@ -1,0 +1,19 @@
+7) 
+Mocninou 2 sú čísla: 
+32 = 2^5;
+512 = 2^9; 
+2048 = 2^11; 
+128 = 2^7; 
+4096 = 2^12
+
+9)
+4 = 0100 (4-bitový zápis)
+18 = 00010010 (8-bitový zápis)
+15 = 1111 (4-bitový zápis)
+255 = 11111111 (8-bitový zápis)
+1023 = 1111111111 (tieto dve čísla sú príliš dlhé, nedajú sa zapísať v 4- ani v 8-bitovom zápise)
+2047 = 11111111111
+42 = 00101010 (8-bitový zápis)
+118 = 01110110 (8-bitový zápis)
+
+Pri prevode z desiatkovej do dvojkovej sústavy som čísla delil číslom 2 a zapisoval zvyšky 0 alebo 1. Keď to bolo možné, použil som 4-bitový, resp. 8-bitový zápis, ale čísla 1023 a 2047 majú zápis príliš dlhý.

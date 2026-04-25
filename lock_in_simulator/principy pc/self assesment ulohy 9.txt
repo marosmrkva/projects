@@ -1,0 +1,32 @@
+4
+najrýchlejšie
+d) MOV EAX, EBX (cca 1 cyklus)
+h) MOV EBX, EAX (cca 1 cyklus)
+b) ADD EAX, EBX (cca 1 cyklus)
+c) SHL EAX, 1 (cca 1 cyklus)
+f) ADD EAX, FF650001h (cca 1 cyklus)
+a) MOV EAX, [00A01580h] (čítanie z pamäte - pomalšie)
+e) ADD EAX, [00A01591h] (čítanie z pamäte - pomalšie)
+g) MOV [00A01584h], EAX (zápis do pamäte - najpomalšie)
+najpomalšie
+
+7
+512 - 36B - int32
+16000000 - 36B - int32
+4000000000 - 44B - uint32
+64000000000 - 44B - uint64
+128 - 36B - int8
+-128 - 36B - int8
+-130 - 36B - int16
+
+13
+a) A<<8
+b) B>>5
+c) nedá sa
+d) C<<3 ale nezachová sa znamienko
+e) D>>4 aritmeticky
+
+
+
+
+

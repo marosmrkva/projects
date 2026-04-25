@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <title>Domov</title>
+    <link rel="stylesheet" href="index.css">
+    <body>
+        <header>
+            <h1>GYMRK: Maturita</h1>
+        </header>
+        <nav>
+            <img src="logo.png" alt="" class="logo">
+            <ul>
+                <li><a href="index.html"><div>Domov</div></a></li>
+                <li><a href="galeria.html"><div>Galéria</div></a></li>
+                <li><a href="kontakt.html"><div>Kontakt</div></a></li>
+            </ul>
+        </nav>
+        <article>
+            <div id="prvyobrazok"><img src="budova.png" alt="" class="obrazok"></div>
+            <section>
+                <h2>O projekte</h2>
+                <p>
+                    Môj maturitný projekt bola <strong>first-person</strong> hra, odohrávajúca sa priamo na mojom gymnáziu.
+                    Cieľom hry je splniť 10 úloh z rôznych maturitných predmetov a odísť zo školy.
+                    Zároveň je v hre vedľajšia úloha - nájsť všetky zelené stužky skryté v budove.
+                    V pláne je hororové rozšírenie, odohrávajúce sa v sne študenta.
+                </p>
+                <p>
+                    Pred týmto projektom som Unreal nikdy nepoužíval, takže bolo zaujímavé učiť sa tvorbe hier od základu.
+                    Celý Unreal a Blueprint som sa naučil z internetu a návodov na youtube, prípadne obľúbenú metódou pokus-omyl.
+                </p>
+            </section>
+            <img src="chodba.png" alt="" class="obrazok">
+            <section class="tabulka">
+                
+                <table>
+                    <tr>
+                        <th colspan="3"><h2>Použitý softvér</h2></th>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">Programy</td>
+                        <td>Použitý engine</td>
+                        <td>Unreal 5.3</td>
+                    </tr>
+                    <tr>
+                        <td>Jazyk</td>
+                        <td>Blueprint (vizuálne skriptovanie v C++)</td>
+                    </tr>
+                    <tr>
+                        <td>3D modely</td>
+                        <td>Autodesk Fusion 360</td>
+                    </tr>
+                    <tr>
+                        <td>Textúry</td>
+                        <td>MS Paint</td>
+                    </tr>
+                </table>
+            </section>
+            <img src="kod.png" alt="" class="obrazok">
+            <section>
+                <h2>Problémy</h2>
+                <p>
+                    Najväčší problém bola optimalizácia. Unreal používa modernú grafiku a zložitý systém osvetlenia.
+                    Svetlo používa tzv. "raytracing", teda presné výpočty pre každý lúč svetla pre detailnejšie a krajšie osvetlenie scény.
+                    Moje gymnázium, ako väčšina budov, má veľa okien, čo znamená veľa skla, teda pridané výpočty pre svetlo.
+                    Musel som upustiť od detailov kvôli výkonu a svetlo teraz vrhá menej detailné tiene a neinteraguje so sklom, čo výrazne zlepšilo chod hry aj na menej výkonných počítačoch.
+
+                </p>
+            </section>
+            <img src="chodba2.png" alt="" class="obrazok">
+        </article>
+
+        <h2>Hru si môžete stiahnuť a zahrať po kliknutí na obrázok dole</h2>
+
+        <a href="https://marosmrkva.itch.io/gymrk-maturita"><img src="logo.png" alt="" class="download"></a>
+    </body>
+</html>

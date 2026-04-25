@@ -1,0 +1,33 @@
+3
+Áno, je to možné.
+Fixed point čísla majú tzv. mierku, teda koľko desatinných miest majú. Môžeme mierkou obe čísla vynásobiť, vynásobiť spolu výsledky a nakoniec výsledok vydeliť mierkou raz za každý činiteľ, čím sa desatinná čiarka posunie na správne miesto.
+Napr.:
+
+a = uint8(0b00010.010) #1.23
+b = uint8(0b00100.100) #4.56
+c = uint8((x*y)>>3)
+print(c)
+
+4
+Problém je overflow na uint8. Musíme pri násobení obe čísla previesť na uint16 ale neskôr po posunutí čiarky sa číslo do uint8 zmestí.
+
+x = uint8(0b00100_010)
+y = uint8(0b00111_000)
+
+z = uint16(x)*uint16(y)
+z = uint8(z>>3)
+print(z/(1<<3))
+
+5
+Áno, je to možné.
+x = uint8(0b00111_000) #5
+y = uint8(0b00011_000) #3
+
+z = x/y
+print(z.round(3))
+
+9
+0010F300: C3 00 65 57 00 AE EC C2 00 00 00 00 00 00 00 00
+0010F310: 00 00 00 00 C0 95 5D C0 00 00 00 00 00 00 00 00
+0010F320: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+

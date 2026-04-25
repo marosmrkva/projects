@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\matus\\projects\\lock in simulator2\\ce_hastag\\abeceda_random_test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EBA8A1B3-9B50-492A-9C10-A7D90269A01C}|abeceda_random_test\\abeceda_random_test.csproj|c:\\users\\matus\\projects\\lock in simulator2\\ce_hastag\\abeceda_random_test\\abeceda_random_test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBA8A1B3-9B50-492A-9C10-A7D90269A01C}|abeceda_random_test\\abeceda_random_test.csproj|solutionrelative:abeceda_random_test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\matus\\projects\\lock in simulator2\\ce_hastag\\abeceda_random_test\\abeceda_random_test\\Program.cs",
+              "RelativeDocumentMoniker": "abeceda_random_test\\Program.cs",
+              "ToolTip": "C:\\Users\\matus\\projects\\lock in simulator2\\ce_hastag\\abeceda_random_test\\abeceda_random_test\\Program.cs",
+              "RelativeToolTip": "abeceda_random_test\\Program.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAowIAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T19:09:13.092Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

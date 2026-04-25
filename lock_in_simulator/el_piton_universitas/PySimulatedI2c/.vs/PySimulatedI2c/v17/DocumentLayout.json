@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\matus\\Desktop\\lock in simulator\\el piton universitas\\PySimulatedI2c\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F412D598-3C45-4E7C-B4F8-C43E0B75D916}|PySimulatedI2c.pyproj|C:\\Users\\matus\\Desktop\\lock in simulator\\el piton universitas\\PySimulatedI2c\\PySimulatedI2c.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F412D598-3C45-4E7C-B4F8-C43E0B75D916}|PySimulatedI2c.pyproj|solutionrelative:PySimulatedI2c.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PySimulatedI2c.py",
+              "DocumentMoniker": "C:\\Users\\matus\\Desktop\\lock in simulator\\el piton universitas\\PySimulatedI2c\\PySimulatedI2c.py",
+              "RelativeDocumentMoniker": "PySimulatedI2c.py",
+              "ToolTip": "C:\\Users\\matus\\Desktop\\lock in simulator\\el piton universitas\\PySimulatedI2c\\PySimulatedI2c.py",
+              "RelativeToolTip": "PySimulatedI2c.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-11-07T18:58:57.487Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\matus\\projects\\lock in simulator2\\ce_hastag\\photoshop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E81835AF-3053-458F-81D1-AB8DDD18EE67}|photoshop\\photoshop.csproj|c:\\users\\matus\\projects\\lock in simulator2\\ce_hastag\\photoshop\\photoshop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81835AF-3053-458F-81D1-AB8DDD18EE67}|photoshop\\photoshop.csproj|solutionrelative:photoshop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81835AF-3053-458F-81D1-AB8DDD18EE67}|photoshop\\photoshop.csproj|c:\\users\\matus\\projects\\lock in simulator2\\ce_hastag\\photoshop\\photoshop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E81835AF-3053-458F-81D1-AB8DDD18EE67}|photoshop\\photoshop.csproj|solutionrelative:photoshop\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\matus\\projects\\lock in simulator2\\ce_hastag\\photoshop\\photoshop\\Form1.cs",
+              "RelativeDocumentMoniker": "photoshop\\Form1.cs",
+              "ToolTip": "C:\\Users\\matus\\projects\\lock in simulator2\\ce_hastag\\photoshop\\photoshop\\Form1.cs",
+              "RelativeToolTip": "photoshop\\Form1.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAIA2wDkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T12:45:11.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\matus\\projects\\lock in simulator2\\ce_hastag\\photoshop\\photoshop\\Form1.cs",
+              "RelativeDocumentMoniker": "photoshop\\Form1.cs",
+              "ToolTip": "C:\\Users\\matus\\projects\\lock in simulator2\\ce_hastag\\photoshop\\photoshop\\Form1.cs [Design]",
+              "RelativeToolTip": "photoshop\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T12:44:32.925Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
