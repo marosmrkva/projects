@@ -1,29 +1,18 @@
-﻿using System.Runtime.CompilerServices;
-using System.Text;
-using System.Windows;
-using System.Windows.Automation;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Collections.ObjectModel;
-using System.Runtime;
-using System.Security.Cryptography.X509Certificates;
-using System.IO;
-
 using Microsoft.Data.Sqlite;
 using Microsoft.Win32;
+using System.Windows.Media;
+using System.Windows.Threading;
 
 namespace Sidequest
 {
     public partial class MainWindow : Window
     {
-        private string dbPath;
+        private static string dbPath;
 
         public ObservableCollection<Quest> listQuests { get; set; }
 
@@ -36,6 +25,8 @@ namespace Sidequest
         public static bool isMouseInside = false;
 
         public static string SaveFile = @"quests_savefile.txt";
+
+        bool isCollapsed = true;
 
         private void SetStartup(bool enable)
         {
@@ -57,6 +48,15 @@ namespace Sidequest
             }
         }
 
+        
+        
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            CheckDeadlines();
+        }
+        
+        
+
         private void InitializeDatabase()
         {
             using (var connection = new SqliteConnection(dbPath))
@@ -77,6 +77,49 @@ namespace Sidequest
             }
         }
 
+        public void CheckDeadlines()
+        {
+            using (var connection = new SqliteConnection(dbPath))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+
+                command.CommandText = "SELECT Id, Deadline FROM Quests ORDER BY Deadline DESC";
+
+                List<Quest> sortedDeadlines = new List<Quest>();
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Quest tempQuest = new Quest();
+                        tempQuest.ID = reader.GetInt32(0);
+                        tempQuest.Deadline = Convert.ToDateTime(reader.GetString(1));
+
+                        sortedDeadlines.Add(tempQuest);
+                    }
+                }
+
+                if (sortedDeadlines.Count == 0) return;
+
+                TimeSpan span = (sortedDeadlines[0].Deadline).Subtract(DateTime.Now);
+
+                if (span.Hours < 24)
+                {
+                    if (isCollapsed)
+                    {
+                        MainBorder.Background = new SolidColorBrush(Colors.Red);
+                    }
+                    else
+                    {
+                        MainBorder.Background = (SolidColorBrush)new BrushConverter().ConvertFrom("#121212");
+                    }
+                }
+            }
+
+        }
+
         private void LoadQuestsFromDatabase()
         {
             listQuests.Clear();
@@ -87,7 +130,7 @@ namespace Sidequest
 
                 var command = connection.CreateCommand();
 
-                command.CommandText = "SELECT Id, QuestName, Deadline, Content FROM Quests";
+                command.CommandText = "SELECT Id, QuestName, Deadline, Content FROM Quests ORDER BY Deadline ASC";
 
                 using (var reader = command.ExecuteReader())
                 {
@@ -151,12 +194,14 @@ namespace Sidequest
 
             NewQuestEntry.Visibility = Visibility.Collapsed;
 
+            CheckDeadlines();
         }
 
         private void Window_Expand(object sender, MouseEventArgs e)
         {
             isMouseInside = true;
-            
+
+            isCollapsed = false;
             animateWindow(300);
             
         }
@@ -168,7 +213,7 @@ namespace Sidequest
 
             if (isMouseInside) return;
 
-            
+            isCollapsed = true;
             animateWindow(40);
             
 
@@ -194,8 +239,6 @@ namespace Sidequest
                 canResize = false;
                 MainGrid.Visibility = Visibility.Collapsed;
             }
-
-            
 
             canResize = true;
 
@@ -229,6 +272,8 @@ namespace Sidequest
                 command.ExecuteNonQuery();
             }
             listQuests.Remove(QuestToRemove);
+
+            CheckDeadlines();
         }
         
 
@@ -267,6 +312,13 @@ namespace Sidequest
 
                 InitializeDatabase();
                 LoadQuestsFromDatabase();
+
+                DispatcherTimer timer = new DispatcherTimer();
+                timer.Interval = TimeSpan.FromSeconds(60);
+                timer.Tick += Timer_Tick;
+                timer.Start();
+
+                CheckDeadlines();
 
                 SetStartup(true);
             }

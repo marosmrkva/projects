@@ -129,7 +129,7 @@
 
     <Border 
         x:Name="MainBorder"
-        BorderBrush="#2A2A2A" 
+        BorderBrush="Cyan" 
         BorderThickness="2" 
         CornerRadius="10"
         Background="#121212"
