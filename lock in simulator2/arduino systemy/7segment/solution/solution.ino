@@ -1,17 +1,16 @@
 #include "funshield.h"
 
-constexpr int powers[] = {1, 10, 100, 1000, 10000};
+constexpr int POWERS[] = {1, 10, 100, 1000, 10000};
+constexpr int DISPLAY_SIZE = 4;
 
 class Button{
   private:
     int pin;
     bool lastState;
-    int currentDigit;
 
   public:
     Button(int buttonPin){
       pin = buttonPin;
-      currentDigit = 0;
     }
 
     void begin(){
@@ -32,7 +31,7 @@ class Button{
 };
 
 int getDigit(int num, int pos){
-  int digit = (num % powers[pos + 1]) / powers[pos];
+  int digit = (num % POWERS[pos + 1]) / POWERS[pos];
 
   return digit;
 }
@@ -40,9 +39,9 @@ int getDigit(int num, int pos){
 void displayNumber(int digit, int position){
   shiftOut(SEG7_DATA_PIN, SEG7_CLOCK_PIN, MSBFIRST, SEG7_DIGIT_GLYPHS[digit]);
 
-  position = 8 >> position;
+  int mask = (1 << (DISPLAY_SIZE - position - 1));
 
-  shiftOut(SEG7_DATA_PIN, SEG7_CLOCK_PIN, MSBFIRST, position);
+  shiftOut(SEG7_DATA_PIN, SEG7_CLOCK_PIN, MSBFIRST, mask);
 
   digitalWrite(SEG7_LATCH_PIN, LOW);
   digitalWrite(SEG7_LATCH_PIN, HIGH);
@@ -68,16 +67,15 @@ int position = 0;
 void loop(){
   
   if (incButton.wasPressed()){
-    number = (number + powers[position]) % 10000;
+    number = (number + POWERS[position]) % POWERS[DISPLAY_SIZE];
   }
   if (decButton.wasPressed()){
-    number = (number - powers[position]) + 10000;
+    number = ((number - POWERS[position]) + POWERS[DISPLAY_SIZE]) % POWERS[DISPLAY_SIZE];
 
   }
   if (digitButton.wasPressed()){
-    position = (position + 1) % 4;
+    position = (position + 1) % DISPLAY_SIZE;
   }
-  
-
   displayNumber(getDigit(number, position), position);
+
 }

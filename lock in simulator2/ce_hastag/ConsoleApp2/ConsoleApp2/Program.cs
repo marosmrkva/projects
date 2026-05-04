@@ -309,7 +309,7 @@ class Program
     static void Main(string[] args)
     {
         //Console.WriteLine(getTotalClicks());
-        string bestTable = "ySevloLOCmd aruIbunitegnarocs .Ah elumaMPtsiqNfT. VbjwFRUEDuQJWH";
+        string bestTable = "HymvaloLRCud erfObgnitpuThrocs NSPaelumawV siq.jUM.tb nFWEADuQIJ";
         int bestCost = EvaluateTable(bestTable, inputString);
         /*
         string bestTable = randomTable([
@@ -373,6 +373,8 @@ class Program
             FoundBetterSwap:;
             }
 
+
+            /*
             // ----------------------------------------------------
             // FÁZA 2: NAHRÁDZANIE ZNAKOV
             // ----------------------------------------------------
@@ -407,6 +409,8 @@ class Program
                             if (!testTable.Contains(charsNeeded[k]))
                             {
                                 isValid = false;
+                                Console.WriteLine(charsNeeded[k]);
+                                //Environment.Exit(0);
                                 break;
                             }
                         }
@@ -429,6 +433,7 @@ class Program
                     }
                 }
             }
+            */
 
             Console.WriteLine("Koniec optimalizácie - lokálne minimum.");
 

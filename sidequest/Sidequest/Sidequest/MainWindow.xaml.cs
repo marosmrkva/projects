@@ -7,14 +7,24 @@ using Microsoft.Data.Sqlite;
 using Microsoft.Win32;
 using System.Windows.Media;
 using System.Windows.Threading;
+using System.Dynamic;
 
 namespace Sidequest
 {
     public partial class MainWindow : Window
     {
+        enum STATUS
+        {
+            Active,
+            Finished,
+            Missed
+        }
+
+        
         private static string dbPath;
 
         public ObservableCollection<Quest> listQuests { get; set; }
+        public ObservableCollection<Quest> listFinishedQuests { get; set; }
 
         public bool isAnimating = false;
         public bool canResize = false;
@@ -70,7 +80,8 @@ namespace Sidequest
                         Id INTEGER PRIMARY KEY AUTOINCREMENT,
                         QuestName TEXT NOT NULL,
                         Deadline TEXT,
-                        Content TEXT
+                        Content TEXT,
+                        Status INTEGER
                     )";
 
                 command.ExecuteNonQuery();
@@ -105,6 +116,19 @@ namespace Sidequest
 
                 TimeSpan span = (sortedDeadlines[0].Deadline).Subtract(DateTime.Now);
 
+                if (sortedDeadlines[0].ID == null) return;
+
+                while (span.TotalSeconds < 0)
+                {
+                    command = connection.CreateCommand();
+                    command.CommandText = "UPDATE Quests SET Status = '2' WHERE Id = @id";
+                    command.Parameters.AddWithValue("@id", sortedDeadlines[0].ID);
+
+                    sortedDeadlines.Remove(sortedDeadlines[0]);
+
+                    span = (sortedDeadlines[0].Deadline).Subtract(DateTime.Now);
+                }
+
                 if (span.Hours < 24)
                 {
                     if (isCollapsed)
@@ -117,7 +141,6 @@ namespace Sidequest
                     }
                 }
             }
-
         }
 
         private void LoadQuestsFromDatabase()
@@ -158,15 +181,22 @@ namespace Sidequest
 
         }
 
-        
         private void SaveNewQuest(object sender, RoutedEventArgs e)
         {
-            
             string newQuestName = NewQuestEntryTextBox.Text;
-            DateTime newQuestDeadline = Convert.ToDateTime(NewQuestDeadlineDate.Text);
-            string newQuestContent = NewQuestContentTextBox.Text;
-
             if (string.IsNullOrWhiteSpace(newQuestName)) return;
+
+            DateTime newQuestDeadline;
+            if (NewQuestDeadlineDate.SelectedDate != null)
+            {
+                newQuestDeadline = NewQuestDeadlineDate.SelectedDate.Value;
+            }
+            else
+            {
+                newQuestDeadline = DateTime.Now.AddDays(1);
+            }
+
+            string newQuestContent = NewQuestContentTextBox.Text;
 
             Quest newQuest = new Quest();
             newQuest.QuestName = newQuestName;
@@ -177,10 +207,8 @@ namespace Sidequest
             using (var connection = new SqliteConnection(dbPath))
             {
                 connection.Open();
-
                 var command = connection.CreateCommand();
-
-                command.CommandText = "INSERT INTO Quests (QuestName, Deadline, Content) VALUES (@name, @date, @content)";
+                command.CommandText = "INSERT INTO Quests (QuestName, Deadline, Content, Status) VALUES (@name, @date, @content, 0)";
 
                 command.Parameters.AddWithValue("@name", newQuestName);
                 command.Parameters.AddWithValue("@date", newQuestDeadline.ToString("s"));
@@ -191,8 +219,55 @@ namespace Sidequest
 
             NewQuestEntryTextBox.Text = "";
             NewQuestContentTextBox.Text = "";
+            NewQuestDeadlineDate.SelectedDate = null;
 
             NewQuestEntry.Visibility = Visibility.Collapsed;
+
+            CheckDeadlines();
+        }
+
+
+
+        private void FinishQuest(object sender, RoutedEventArgs e)
+        {
+            Button pressedButton = sender as Button;
+            Quest QuestToFinish = pressedButton.DataContext as Quest;
+
+            if (QuestToFinish == null) return;
+
+            using (var connection = new SqliteConnection(dbPath))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+
+                command.CommandText = "UDPATE Quests SET Status = 1 WHERE Id = @id";
+                command.Parameters.AddWithValue("@id", QuestToFinish.ID);
+
+                command.ExecuteNonQuery();
+            }
+            listQuests.Remove(QuestToFinish);
+        }
+
+        private void RemoveQuest(object sender, RoutedEventArgs e)
+        {
+            Button pressedButton = sender as Button;
+            Quest QuestToRemove = pressedButton.DataContext as Quest;
+
+            if (QuestToRemove == null) return;
+
+            using (var connection = new SqliteConnection(dbPath))
+            {
+                connection.Open();
+
+                var command = connection.CreateCommand();
+
+                command.CommandText = "DELETE FROM Quests WHERE Id = @id";
+                command.Parameters.AddWithValue("@id", QuestToRemove.ID);
+
+                command.ExecuteNonQuery();
+            }
+            listQuests.Remove(QuestToRemove);
 
             CheckDeadlines();
         }
@@ -215,8 +290,6 @@ namespace Sidequest
 
             isCollapsed = true;
             animateWindow(40);
-            
-
         }
 
 
@@ -251,29 +324,6 @@ namespace Sidequest
             if (canResize && targetSize == 300) MainGrid.Visibility = Visibility.Visible;
 
             Thread.Sleep(250);
-        }
-        
-        private void RemoveQuest(object sender, RoutedEventArgs e)
-        {
-            Button pressedButton = sender as Button;
-            Quest QuestToRemove = pressedButton.DataContext as Quest;
-
-            if (QuestToRemove == null) return;
-
-            using (var connection = new SqliteConnection(dbPath))
-            {
-                connection.Open();
-
-                var command = connection.CreateCommand();
-
-                command.CommandText = "DELETE FROM Quests WHERE Id = @id";
-                command.Parameters.AddWithValue("@id", QuestToRemove.ID);
-
-                command.ExecuteNonQuery();
-            }
-            listQuests.Remove(QuestToRemove);
-
-            CheckDeadlines();
         }
         
 

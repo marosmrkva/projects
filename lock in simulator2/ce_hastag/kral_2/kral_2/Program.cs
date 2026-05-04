@@ -1,0 +1,90 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace kral;
+
+class King
+{
+    public static void KingsPath()
+    {
+        bool[,] chessboard = new bool[8, 8];
+
+        int obstacles = Convert.ToInt32(Console.ReadLine());
+
+
+        for (int i = 0; i < obstacles; i++)
+        {
+            string[] input = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            int x = Convert.ToInt32(input[0]) - 1;
+            int y = Convert.ToInt32(input[1]) - 1;
+            chessboard[y, x] = true;
+        }
+
+        string[] startPos = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+        int startX = Convert.ToInt32(startPos[0]) - 1;
+        int startY = Convert.ToInt32(startPos[1]) - 1;
+        string[] endPos = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+        int endX = Convert.ToInt32(endPos[0]) - 1;
+        int endY = Convert.ToInt32(endPos[1]) - 1;
+
+        Queue<(int, int, List<(int, int)>)> movesQueue = new Queue<(int, int, List<(int, int)>)>();
+
+        List<(int, int)> path = new List<(int, int)>();
+        path.Add((startX, startY));
+
+        movesQueue.Enqueue((startX, startY, path));
+
+
+        while (movesQueue.Count > 0)
+        {
+            (int currX, int currY, List<(int, int)> localPath) = movesQueue.Dequeue();
+
+            if ((currX, currY) == (endX, endY))
+            {
+                foreach ((int x, int y) in localPath)
+                {
+                    Console.WriteLine((x + 1) + " " + (y + 1));
+
+                }
+                return;
+            }
+
+            foreach (int moveX in new int[] { -1, 0, 1 })
+            {
+                foreach (int moveY in new int[] { -1, 0, 1 })
+                {
+                    if ((moveX, moveY) == (0, 0))
+                    {
+                        continue;
+                    }
+                    int newX = currX + moveX;
+                    int newY = currY + moveY;
+
+                    if (newX >= 0 && newX < 8 && newY >= 0 && newY < 8)
+                    {
+                        if (chessboard[newY, newX] != true)
+                        {
+                            List<(int, int)> newPath = new List<(int, int)>(localPath);
+                            newPath.Add((newX, newY));
+                            chessboard[newY, newX] = true;
+                            movesQueue.Enqueue((newX, newY, newPath));
+                        }
+                    }
+                }
+            }
+        }
+
+        Console.WriteLine(-1);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+        King.KingsPath();
+
+    }
+}
