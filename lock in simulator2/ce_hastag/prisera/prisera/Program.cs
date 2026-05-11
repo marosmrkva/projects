@@ -45,7 +45,7 @@ namespace prisera
             int mapHeight = mapToPrint.GetLength(0);
             int mapWidth = mapToPrint.GetLength(1);
 
-            for (int i = 0; i < mapHeight; i++)y
+            for (int i = 0; i < mapHeight; i++)
             {
                 for (int j = 0; j < mapWidth; j++)
                 {
@@ -58,8 +58,6 @@ namespace prisera
 
         private static void move(char[,] getMap)
         {
-            int moves = 0;
-
             for (int i = 0; i < 20; i++) 
             {
                 //did we turn last move
@@ -163,29 +161,21 @@ namespace prisera
                             getMap[monsterPos[0], monsterPos[1] + 1] = '>';
                             getMap[monsterPos[0], monsterPos[1]] = '.';
                             monsterPos[1] += 1;
-
-                            moves += 1;
                             break;
                         case '^':
                             getMap[monsterPos[0] - 1, monsterPos[1]] = '^';
                             getMap[monsterPos[0], monsterPos[1]] = '.';
                             monsterPos[0] -= 1;
-
-                            moves += 1;
                             break;
                         case '<':
                             getMap[monsterPos[0], monsterPos[1] - 1] = '<';
                             getMap[monsterPos[0], monsterPos[1]] = '.';
                             monsterPos[1] -= 1;
-
-                            moves += 1;
                             break;
                         case 'v':
                             getMap[monsterPos[0] + 1, monsterPos[1]] = 'v';
                             getMap[monsterPos[0], monsterPos[1]] = '.';
                             monsterPos[0] += 1;
-
-                            moves += 1;
                             break;
                     }
                 }

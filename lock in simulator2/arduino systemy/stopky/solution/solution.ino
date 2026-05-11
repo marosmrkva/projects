@@ -3,9 +3,14 @@
 constexpr int POWERS[] = {1, 10, 100, 1000, 10000};
 constexpr int DISPLAY_SIZE = 4;
 
+enum State{
+  stopped,
+  running,
+  lapped
+};
+
 int getDigit(int num, int pos){
   int digit = (num % POWERS[pos + 1]) / POWERS[pos];
-
   return digit;
 }
 
@@ -37,6 +42,66 @@ class Button{
     }
 };
 
+class Timer{
+  private:
+    State currentState;
+    unsigned long elapsedTime = 0;
+    unsigned long lastTime = 0;
+    unsigned long frozenLapTime;
+
+  public:
+    Timer(){
+      currentState = stopped;
+    } 
+
+    void loop(bool b1Pressed, bool b2Pressed, bool b3Pressed){
+
+      unsigned long currentTime = millis();
+      unsigned long deltaTime = currentTime - lastTime;
+      lastTime = currentTime;
+
+      if (currentState == running || currentState == lapped){
+        elapsedTime += deltaTime;
+      }   
+
+      if (b1Pressed){
+        if (currentState == stopped){
+          currentState = running;
+        }
+        else if (currentState == running){
+          currentState = stopped;
+        }
+      }
+
+      if (b2Pressed){
+        if (currentState == running){
+          currentState = lapped;
+          frozenLapTime = elapsedTime;
+        }
+        else if (currentState == lapped){
+          currentState = running;
+        }
+      }
+
+      if (b3Pressed){
+        if (currentState == stopped){
+          currentState = stopped;
+          elapsedTime = 0;
+        }
+      }
+    }
+
+    int getDisplayTime(){
+      if (currentState == running ||currentState == stopped){
+        return elapsedTime / 100;
+      }
+      else if (currentState == lapped){
+        return frozenLapTime / 100;
+      }
+      return 0;
+    }
+};
+
 class Display{
   private:
     int currentNumber;
@@ -60,7 +125,7 @@ class Display{
 
       byte glyph = SEG7_DIGIT_GLYPHS[digit];
 
-      if (position > decimalPos && digit == 0){
+      if (position > decimalPos && number < POWERS[position]){
         glyph = SEG7_EMPTY_GLYPH;
       }
 
@@ -85,39 +150,28 @@ class Display{
     }
 };
 
-Button incButton(BUTTON1_PIN);
-Button decButton(BUTTON2_PIN);
+Button startButton(BUTTON1_PIN);
+Button lapButton(BUTTON2_PIN);
+Button resetButton(BUTTON3_PIN);
 Display display;
-Button decimalButton(BUTTON3_PIN);
-
-int number = 0;
-int position = 0;
-int decimalPosition = 0;
+Timer timer;
 
 void setup(){
   pinMode(SEG7_LATCH_PIN, OUTPUT);
   pinMode(SEG7_CLOCK_PIN, OUTPUT);
   pinMode(SEG7_DATA_PIN, OUTPUT);
 
-  incButton.begin();
-  decButton.begin();
-  decimalButton.begin();
+  startButton.begin();
+  lapButton.begin();
+  resetButton.begin();
 }
 
-
 void loop(){
-  
-  if (incButton.wasPressed()){
-    number = (number + POWERS[position]) % POWERS[DISPLAY_SIZE];
-  }
-  if (decButton.wasPressed()){
-    number = ((number - POWERS[position]) + POWERS[DISPLAY_SIZE]) % POWERS[DISPLAY_SIZE];
-  }
-  if (decimalButton.wasPressed()){
-    decimalPosition = (decimalPosition + 1) % DISPLAY_SIZE;
-  }  
+  bool b1 = startButton.wasPressed();
+  bool b2 = lapButton.wasPressed();
+  bool b3 = resetButton.wasPressed();
 
-  display.setNumber(number, decimalPosition);
-
+  timer.loop(b1, b2, b3);
+  display.setNumber(timer.getDisplayTime(), 1);
   display.loop();
 }

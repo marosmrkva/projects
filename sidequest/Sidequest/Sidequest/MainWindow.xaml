@@ -153,7 +153,7 @@
                      Background="#121212"
                      ScrollViewer.VerticalScrollBarVisibility="Hidden"
                      Grid.Column="0"
-                     Grid.Row="1" SelectionChanged="ListBox_SelectionChanged">
+                     Grid.Row="1">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Margin="0,0,0,12">
