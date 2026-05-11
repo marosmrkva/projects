@@ -1,0 +1,119 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace sklad
+{
+    internal class Program
+    {
+        static int Skladnik()
+        {
+            char[,] roomMap = new char[10, 10];
+
+            int[] start = new int[2];
+            int[] end = new int[2];
+            int[] box = new int[2];
+
+            for (int i = 0; i < 10; i++)
+            {
+                string line = Console.ReadLine();
+                // Skip empty lines that may appear in input
+                while (string.IsNullOrEmpty(line))
+                {
+                    line = Console.ReadLine();
+                }
+
+                for (int j = 0; j < 10; j++)
+                {
+                    char position = j < line.Length ? line[j] : '.';
+
+                    switch (position)
+                    {
+                        case '.':
+                            roomMap[i, j] = '.';
+                            break;
+                        case 'X':
+                            roomMap[i, j] = 'X';
+                            break;
+                        case 'C':
+                            roomMap[i, j] = '.';
+                            end[0] = j;
+                            end[1] = i;
+                            break;
+                        case 'S':
+                            roomMap[i, j] = '.';
+                            start[0] = j;
+                            start[1] = i;
+                            break;
+                        case 'B':
+                            roomMap[i, j] = '.';
+                            box[0] = j;
+                            box[1] = i;
+                            break;
+                        default:
+                            roomMap[i, j] = '.';
+                            break;
+                    }
+                }
+            }
+
+            
+            Queue<(int, int, int, int, int)> movesQueue = new Queue<(int, int, int, int, int)>();
+
+            movesQueue.Enqueue((start[0], start[1], box[0], box[1], 0));
+
+            (int, int)[] moves = new (int, int)[] { (0, 1), (1, 0), (0, -1), (-1, 0) };
+
+
+            while (movesQueue.Count > 0)
+            {
+                (int currX, int currY, int boxX, int boxY, int currentMovesCount) = movesQueue.Dequeue();
+
+                if ((boxX, boxY) == (end[0], end[1]))
+                {
+                    return currentMovesCount;
+                }
+
+                if ((roomMap[boxY, boxX + 1] == 'X' && roomMap[boxY + 1, boxX] == 'X') ||
+                    (roomMap[boxY, boxX + 1] == 'X' && roomMap[boxY - 1, boxX] == 'X') ||
+                    (roomMap[boxY, boxX - 1] == 'X' && roomMap[boxY + 1, boxX] == 'X') ||
+                    (roomMap[boxY, boxX - 1] == 'X' && roomMap[boxY - 1, boxX] == 'X'))
+                {
+                    continue;
+                }
+
+                foreach ((int moveX, int moveY) in moves)
+                {
+                    int newX = currX + moveX;
+                    int newY = currY + moveY;
+
+                    if ((newX >= 0 && newX < 10 && newY >= 0 && newY < 10) && (boxX >= 0 && boxX < 10 && boxY >= 0 && boxY < 10))
+                    {
+                        if (roomMap[newY, newX] == '.' || roomMap[newY, newX] == ',')
+                        {
+                            if ((newX, newY) == (boxX, boxY))
+                            {
+                                int newBoxX = boxX + moveX;
+                                int newBoxY = boxY + moveY;
+
+                                movesQueue.Enqueue((newX, newY, newBoxX, newBoxY, currentMovesCount + 1));
+                            }
+                            else { movesQueue.Enqueue((newX, newY, boxX, boxY, currentMovesCount + 1)); }
+
+                            if (roomMap[newY, newX] == '.') roomMap[newY, newX] = ',';
+                            else roomMap[newY, newX] = 'X';
+                        }
+                    }
+            }
+
+            return -1;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Skladnik());
+        }
+    }
+}

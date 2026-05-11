@@ -1,0 +1,15 @@
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\rozklad_na_prvocisla\bin\Debug\rozklad_na_prvocisla.exe.config
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\rozklad_na_prvocisla\bin\Debug\rozklad_na_prvocisla.exe
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\rozklad_na_prvocisla\bin\Debug\rozklad_na_prvocisla.pdb
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\rozklad_na_prvocisla\obj\Debug\rozklad_na_prvocisla.csproj.AssemblyReference.cache
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\rozklad_na_prvocisla\obj\Debug\rozklad_na_prvocisla.csproj.CoreCompileInputs.cache
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\rozklad_na_prvocisla\obj\Debug\rozklad_na_prvocisla.exe
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\rozklad_na_prvocisla\obj\Debug\rozklad_na_prvocisla.pdb
+C:\Users\matus\Desktop\lock in simulator\ce_hastag\rozklad_na_prvocisla\obj\Debug\rozklad_na_prvocisla.exe.config
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\rozklad_na_prvocisla\bin\Debug\rozklad_na_prvocisla.exe.config
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\rozklad_na_prvocisla\bin\Debug\rozklad_na_prvocisla.exe
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\rozklad_na_prvocisla\bin\Debug\rozklad_na_prvocisla.pdb
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\rozklad_na_prvocisla\obj\Debug\rozklad_na_prvocisla.csproj.AssemblyReference.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\rozklad_na_prvocisla\obj\Debug\rozklad_na_prvocisla.csproj.CoreCompileInputs.cache
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\rozklad_na_prvocisla\obj\Debug\rozklad_na_prvocisla.exe
+C:\Users\matus\Desktop\lock in simulator2\ce_hastag\rozklad_na_prvocisla\obj\Debug\rozklad_na_prvocisla.pdb
